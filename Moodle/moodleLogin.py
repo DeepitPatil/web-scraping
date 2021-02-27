@@ -1,9 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
+import getpass
 
 username = input("username : ")
-password = input("password : ")
+password = getpass.getpass("password : ", stream=None)
 
 driver = webdriver.Chrome("/Users/deepitpatil/chromedriver")
 driver.get("https://moodle.iitd.ac.in/login/index.php")
